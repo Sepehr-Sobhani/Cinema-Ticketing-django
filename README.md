@@ -1,2 +1,2 @@
 # Cinema-Ticketing-django
-First Django project
+A website for cinema ticket sale, written by django
