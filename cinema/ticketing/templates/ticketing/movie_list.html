@@ -1,23 +1,27 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Movies List</title>
+    <title>لیست فیلم ها</title>
+    <link rel='stylesheet' type='text/css' href='{% static "ticketing/css/main.css" %}'>
 </head>
-<body>
+<body dir='rtl'>
     <h1>
-        Cinema Booking System
+        سامانه فروش بلیت سینما
     </h1>
-    <h3>
-        On Screen Movies
-    </h3>
-        <a href=' {% url "ticketing:cinema_list" %} ''>
-        Cinemas List
+    <h2>
+        فهرست فیلم ها
+    </h2>
+        <a href=' {% url "ticketing:cinema_list" %} '>
+        لیست سینماها
     </a>
     <ul>
         {% if movie_list %}
             <p style="color: green">
-            There are {{ movie_count }} movies availabe
+            تعداد
+             {{ movie_count }}
+              عدد فیلم موجود است
             </p>
             <ul>
                 {% for movie in movie_list %}
@@ -28,9 +32,10 @@
             </ul>
         {% else %} 
             <p style="color: red">
-            no movie available
+            فیلمی وجود ندارد
             </p>
         {% endif %}
     </ul>
+    <script src='{% static "ticketing/js/main/js" %}'></script>
 </body>
 </html>

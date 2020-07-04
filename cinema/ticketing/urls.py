@@ -1,5 +1,5 @@
 from django.urls.conf import path
-from .views import *
+from .views import movie_list, cinema_list
 
 app_name = 'ticketing'
 
