@@ -10,6 +10,7 @@ class Movie(models.Model):
     year = models.IntegerField()
     length = models.IntegerField()
     description = models.TextField()
+    # poster = models.ImageField(upload_to='movie_posters/')
 
     def __str__(self):
         return self.name

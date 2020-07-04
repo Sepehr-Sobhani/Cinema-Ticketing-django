@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cinemas List</title>
+</head>
+<body>
+    <h1>
+        Cinema Booking System
+    </h1>
+    <h3>
+        Cinemas List
+    </h3>
+    <a href=' {% url "ticketing:movie_list" %} '>
+        Movies List
+    </a>
+    <ul>
+        {% if cinemas %}
+            <ul>
+                {% for cinema in cinemas %}
+                    <li>
+                    {{ cinema }}
+                    </li>
+                {% endfor %}
+            </ul>
+        {% else %} 
+            <p style="color: red">
+            no Cinema available
+            </p>
+        {% endif %}
+    </ul>
+</body>
+</html>
